@@ -99,5 +99,30 @@ class Products extends ResourceController
         }
          
     }
+
+    public function funGet()
+    {
+        echo 'funGet';
+    }
+
+    public function funPost()
+    {
+        $json = $this->request->getJSON();
+        $response = [
+            'status'   => 200,
+            'data'    => $json
+        ];
+        return $this->respond($response);
+    }
+
+    public function funPostParams($id = null)
+    {
+        $json = $this->request->getJSON();
+        $response = [
+            'status'   => 200,
+            'data'    => $json
+        ];
+        return $this->respond($response);
+    }
  
 }

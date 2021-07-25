@@ -354,6 +354,53 @@ Test On Postman
 
 ---
 
+```php
+$routes->resource('products');
+
+//http://localhost:8081/funGet
+$routes->get('/funGet', 'Products::funGet'); 
+
+//http://localhost:8081/funPost
+//{
+//    "nama" : "nama nih"
+//}
+$routes->post('/funPost', 'Products::funPost'); 
+
+```
+
+```php
+class Products extends ResourceController
+{
+
+    public function funGet()
+    {
+        echo 'funGet';
+    }
+
+    public function funPost()
+    {
+        $json = $this->request->getJSON();
+        $response = [
+            'status'   => 200,
+            'data'    => $json
+        ];
+        return $this->respond($response);
+    }
+
+    public function funPostParams($id = null)
+    {
+        $json = $this->request->getJSON();
+        $response = [
+            'status'   => 200,
+            'data'    => $json
+        ];
+        return $this->respond($response);
+    }
+}
+```
+
+---
+
 Thanks to [mfikri.com](https://mfikri.com/artikel/restful-api-codeigniter4)
 
 ---

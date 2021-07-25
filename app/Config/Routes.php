@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->resource('products');
+$routes->get('/funGet', 'Products::funGet');
+$routes->post('/funPost', 'Products::funPost');
 
 /*
  * --------------------------------------------------------------------
