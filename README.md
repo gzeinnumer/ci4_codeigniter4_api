@@ -88,7 +88,7 @@ CI_ENVIRONMENT = development
 
 ## Membuat file Model
 
-Buat sebuah file model bernama “ProductModel.php” pada folder “app/Models”, kemudian ketikan kode berikut:
+Buat sebuah file model bernama **ProductModel.php** pada folder **app/Models**, kemudian ketikan kode berikut:
 ```php
 <?php namespace App\Models;
  
@@ -106,7 +106,7 @@ class ProductModel extends Model
 
 ## Membuat file Controller
 
-Buat sebuah file controller bernama “Products.php” pada folder “app/Controllers”, kemudian ketikan kode berikut:
+Buat sebuah file controller bernama **Products.php** pada folder **app/Controllers**, kemudian ketikan kode berikut:
 
 ```php
 <?php namespace App\Controllers;
@@ -215,7 +215,7 @@ class Products extends ResourceController
 ```
 CodeIgniter 4 telah memberikan kemudahan bagi web developer dalam membuat RESTful API.
 
-Dapat dilihat pada controller Products.php diatas, dengan hanya mengextends ResourceController kita telah dapat membuat RESTful API.
+Dapat dilihat pada controller **Products.php** diatas, dengan hanya mengextends **ResourceController** kita telah dapat membuat RESTful API.
 
 Tidak hanya itu,
 
@@ -225,9 +225,9 @@ Kita juga bisa dengan mudah membuat response dengan menggunakan API ResponseTrai
 
 ## Konfigurasi Routes.php
 
-Langkah terakhir yang tidak kalah pentingnya yaitu melakukan sedikit konfigurasi pada file Routes.php yang terdapat pada folder “app/Config”.
+Langkah terakhir yang tidak kalah pentingnya yaitu melakukan sedikit konfigurasi pada file Routes.php yang terdapat pada folder **app/Config**.
 
-Buka file “Routes.php” pada folder “app/Config”, kemudian temukan kode berikut:
+Buka file **Routes.php** pada folder **app/Config**, kemudian temukan kode berikut:
 
 ```php
 $routes->get('/', 'Home::index');
@@ -244,7 +244,7 @@ $routes->resource('products');
 ## Aktifkan CORS (Cross-Origin Resources Sharing)
 
 Agar resources dapat diakses di luar domain, kita perlu mengaktifkan CORS.
-Untuk menaktifkan CORS, buat file bernama “Cors.php” pada folder “app/Filters”.
+Untuk menaktifkan CORS, buat file bernama **Cors.php** pada folder **app/Filters**.
 Kemudian ketikan kode berikut:
 
 ```php
@@ -274,7 +274,7 @@ Class Cors implements FilterInterface
 }
 ```
 
-Selanjutnya buka file “Filters.php” yang terdapat pada folder “app/Config”.
+Selanjutnya buka file Filters.php yang terdapat pada folder **app/Config**.
 Kemudian temukan kode berikut:
 ```php
 public $aliases = [
