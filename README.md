@@ -151,7 +151,7 @@ class Products extends ResourceController
             ]
         ];
          
-        return $this->respondCreated($data, 201);
+        return $this->respondCreated($response, 201);
     }
  
     // update product
