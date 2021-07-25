@@ -234,7 +234,7 @@ $routes->resource('products');
 **products** adalah nama controller
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/BaseUtils/blob/master/preview/bg.jpg"/>
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example1.jpg"/>
 </p>
 
 ---
@@ -320,3 +320,23 @@ php spark serve
 ```
 php spark serve --port 8081
 ```
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example2.jpg"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example3.jpg"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example4.jpg"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example5.jpg"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example6.jpg"/>
+</p>
