@@ -1,13 +1,15 @@
 # ci4_codeigniter4_api
+
+#### Buat Database dan Table
  
-Disini saya membuat database dengan nama restful_db.
+Disini saya membuat database dengan nama **restful_db**.
 ```sql
 CREATE DATABASE restful_db;
 ```
 
 #
 
-Disini saya membuat sebuah table dengan nama product.
+Disini saya membuat sebuah table dengan nama **product**.
 ```sql
 CREATE TABLE product(
 product_id INT(11) PRIMARY KEY AUTO_INCREMENT,
@@ -18,7 +20,7 @@ product_price DOUBLE
 
 #
 
-Selanjutnya, insert beberapa data kedalam table product dengan mengeksekusi query berikut:
+Selanjutnya, insert beberapa data kedalam table **product** dengan mengeksekusi query berikut:
 ```sql
 INSERT INTO product(product_name,product_price) VALUES
 ('Product 1','2000'),
@@ -30,6 +32,8 @@ INSERT INTO product(product_name,product_price) VALUES
 
 ---
 
+#### Instalasi CodeIgniter 4 
+
 Download file Codeigniter 4 pada link berikut:
 
 [https://codeigniter.com](https://codeigniter.com)
@@ -38,7 +42,9 @@ Download dan ekstrack ke htdocs ubah folder dengan nama **ci4_codeigniter4_api**
 
 ---
 
-Buka file “Database.php” yang terdapat pada folder “app/Config”, kemudian temukan kode berikut:
+#### Membuat koneksi ke database
+
+Buka file **Database.php** yang terdapat pada folder **app/Config**, kemudian temukan kode berikut:
 ```php
 public $default = [
     'DSN'      => '',
@@ -66,7 +72,7 @@ Ubah **username** **password** **database**.
 
 #
 
-Agar Anda memiliki interface yang baik untuk menangani error, temukan file env pada root project, kemudian rename (ganti nama) menjadi .env dan open file tersebut.
+Agar Anda memiliki interface yang baik untuk menangani error, temukan file **env** pada root project, kemudian rename (ganti nama) menjadi **.env** dan open file tersebut.
 
 Kemudian temukan kode berikut:
 ```php
@@ -78,7 +84,7 @@ Kemudian ubah menjadi seperti berikut:
 CI_ENVIRONMENT = development
 ```
 
-#
+---
 
 #### Membuat file Model
 
@@ -96,7 +102,7 @@ class ProductModel extends Model
 }
 ```
 
-#
+---
 
 #### Membuat file Controller
 
@@ -229,7 +235,9 @@ $routes->resource('products');
 ```
 **products** adalah nama controller
 
-![]()
+<p align="center">
+  <img src="https://github.com/gzeinnumer/BaseUtils/blob/master/preview/bg.jpg"/>
+</p>
 
 #
 
