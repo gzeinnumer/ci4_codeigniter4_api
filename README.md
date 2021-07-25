@@ -321,6 +321,17 @@ php spark serve
 php spark serve --port 8081
 ```
 
+#
+
+If Error Happen
+<p align="center">
+  <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example7.jpg"/>
+</p>
+
+#
+
+Test On Postman
+
 <p align="center">
   <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example2.jpg"/>
 </p>
@@ -340,3 +351,13 @@ php spark serve --port 8081
 <p align="center">
   <img src="https://github.com/gzeinnumer/ci4_codeigniter4_api/blob/master/preview/example6.jpg"/>
 </p>
+
+---
+
+Thanks to [mfikri.com](https://mfikri.com/artikel/restful-api-codeigniter4)
+
+---
+
+```
+Copyright 2021 M. Fadli Zein
+```
