@@ -208,9 +208,7 @@ class Products extends ResourceController
         }else{
             return $this->failNotFound('No Data Found with id '.$id);
         }
-         
     }
- 
 }
 ```
 CodeIgniter 4 telah memberikan kemudahan bagi web developer dalam membuat RESTful API.
@@ -219,9 +217,9 @@ Dapat dilihat pada controller **Products.php** diatas, dengan hanya mengextends 
 
 Tidak hanya itu,
 
-Kita juga bisa dengan mudah membuat response dengan menggunakan API ResponseTrait.
+Kita juga bisa dengan mudah membuat response dengan menggunakan **API ResponseTrait**.
 
-#
+---
 
 ## Konfigurasi Routes.php
 
@@ -239,7 +237,7 @@ $routes->resource('products');
   <img src="https://github.com/gzeinnumer/BaseUtils/blob/master/preview/bg.jpg"/>
 </p>
 
-#
+---
 
 ## Aktifkan CORS (Cross-Origin Resources Sharing)
 
@@ -273,6 +271,8 @@ Class Cors implements FilterInterface
     }
 }
 ```
+
+# 
 
 Selanjutnya buka file Filters.php yang terdapat pada folder **app/Config**.
 Kemudian temukan kode berikut:
