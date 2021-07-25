@@ -1,6 +1,6 @@
 # ci4_codeigniter4_api
 
-#### Buat Database dan Table
+## Buat Database dan Table
  
 Disini saya membuat database dengan nama **restful_db**.
 ```sql
@@ -32,7 +32,7 @@ INSERT INTO product(product_name,product_price) VALUES
 
 ---
 
-#### Instalasi CodeIgniter 4 
+## Instalasi CodeIgniter 4 
 
 Download file Codeigniter 4 pada link berikut:
 
@@ -42,7 +42,7 @@ Download dan ekstrack ke htdocs ubah folder dengan nama **ci4_codeigniter4_api**
 
 ---
 
-#### Membuat koneksi ke database
+## Membuat koneksi ke database
 
 Buka file **Database.php** yang terdapat pada folder **app/Config**, kemudian temukan kode berikut:
 ```php
@@ -86,7 +86,7 @@ CI_ENVIRONMENT = development
 
 ---
 
-#### Membuat file Model
+## Membuat file Model
 
 Buat sebuah file model bernama “ProductModel.php” pada folder “app/Models”, kemudian ketikan kode berikut:
 ```php
@@ -104,7 +104,7 @@ class ProductModel extends Model
 
 ---
 
-#### Membuat file Controller
+## Membuat file Controller
 
 Buat sebuah file controller bernama “Products.php” pada folder “app/Controllers”, kemudian ketikan kode berikut:
 
@@ -223,7 +223,7 @@ Kita juga bisa dengan mudah membuat response dengan menggunakan API ResponseTrai
 
 #
 
-#### Konfigurasi Routes.php
+## Konfigurasi Routes.php
 
 Langkah terakhir yang tidak kalah pentingnya yaitu melakukan sedikit konfigurasi pada file Routes.php yang terdapat pada folder “app/Config”.
 
@@ -241,7 +241,7 @@ $routes->resource('products');
 
 #
 
-#### Aktifkan CORS (Cross-Origin Resources Sharing)
+## Aktifkan CORS (Cross-Origin Resources Sharing)
 
 Agar resources dapat diakses di luar domain, kita perlu mengaktifkan CORS.
 Untuk menaktifkan CORS, buat file bernama “Cors.php” pada folder “app/Filters”.
@@ -311,7 +311,7 @@ public $globals = [
 
 ---
 
-#### Testing
+## Testing
 
 alankan project dengan mengetikkan perintah berikut pada Terminal / Command Prompt:
 ```
