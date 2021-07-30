@@ -32,11 +32,24 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 $routes->get('/', 'Home::index');
 $routes->resource('products');
-$routes->get('/funGet', 'Products::funGet');
-$routes->post('/funPost', 'Products::funPost');
 
+//http://localhost:8080/QueryTest/funGet
+$routes->post('/funGet', 'QueryTest::funGet');
+
+//http://localhost:8080/QueryTest/funPost
+//{
+//    "nama" : "nama nih"
+//}
+$routes->post('/funPost', 'QueryTest::funPost');
+
+//http://localhost:8080/QueryTest/funPostParams/1
+$routes->post('/funPostParams/(:num)', 'QueryTest::funPostParams/$1');
+
+//http://localhost:8080/QueryTest/query
+$routes->post('/query', 'QueryTest::query');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

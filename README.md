@@ -354,27 +354,44 @@ Test On Postman
 
 ---
 
+## Random Trial
+
 ```php
 $routes->resource('products');
 
-//http://localhost:8081/funGet
-$routes->get('/funGet', 'Products::funGet'); 
+//http://localhost:8080/QueryTest/funGet
+$routes->post('/funGet', 'QueryTest::funGet');
 
-//http://localhost:8081/funPost
+//http://localhost:8080/QueryTest/funPost
 //{
 //    "nama" : "nama nih"
 //}
-$routes->post('/funPost', 'Products::funPost'); 
+$routes->post('/funPost', 'QueryTest::funPost');
 
+//http://localhost:8080/QueryTest/funPostParams/1
+$routes->post('/funPostParams/(:num)', 'QueryTest::funPostParams/$1');
+
+//http://localhost:8080/QueryTest/query
+$routes->post('/query', 'QueryTest::query');
 ```
 
 ```php
-class Products extends ResourceController
+<?php namespace App\Controllers;
+ 
+use CodeIgniter\RESTful\ResourceController;
+use CodeIgniter\API\ResponseTrait;
+use App\Models\ProductModel;
+ 
+class QueryTest extends ResourceController
 {
 
     public function funGet()
     {
-        echo 'funGet';
+        $response = [
+            'status'   => 200,
+            'data'    => 'data'
+        ];
+        return $this->respond($response);
     }
 
     public function funPost()
@@ -389,12 +406,23 @@ class Products extends ResourceController
 
     public function funPostParams($id = null)
     {
-        $json = $this->request->getJSON();
         $response = [
             'status'   => 200,
-            'data'    => $json
+            'data'    => $id
         ];
         return $this->respond($response);
+    } 
+    
+    public function query()
+    {
+        $query = "SELECT * FROM product;";
+        $db = \Config\Database::connect();
+        $data = $db->query($query);
+
+        // return json_encode($data->getResult());
+        // return json_encode($query->getResultArray());
+        // return json_encode($query->getRow());
+        return $this->respond($data->getResult());
     }
 }
 ```
